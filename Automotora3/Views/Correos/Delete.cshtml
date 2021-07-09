@@ -33,7 +33,8 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Volver</a>
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a class="btn btn-warning" asp-area="" asp-controller="Correos" asp-action="Index">Volver</a>
+        
     </form>
 </div>
