@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="text-center">Administrador</h1>
+    <br />
+    <h4 class="text-center">
+        La administración de negocios busca orientar al máximo la gestión de una empresa
+        o negocio pequeño. Según la definición de Stephen Robbins, experto en gestión empresarial y en comportamiento organizacional,
+        “administrar un negocio significa realizar tareas de coordinación y supervisión de las actividades laborales de otras
+        personas de tal manera que se realicen de forma eficiente y eficaz”
+    </h4>
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Sucursal</h5>
+                    <p class="card-text text-center">Ingrese, modifique o elimine las nuevas sucursales</p>
+                    <a class="btn btn-warning" asp-area="" asp-controller="Sucursales" asp-action="Index">Administrar</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Vehiculos</h5>
+                    <p class="card-text text-center">Ingrese, modifique o elimine los nuevos autos</p>
+                    <a class="btn btn-warning" asp-area="" asp-controller="Vehiculos" asp-action="Index">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Clientes</h5>
+                    <p class="card-text">Registre, modifique o elimine a los nuevos clientes.</p>
+                    <a class="btn btn-warning" asp-area="" asp-controller="Clientes" asp-action="Index">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Correo</h5>
+                    <p class="card-text">Registre, modifique o elimine a los nuevos clientes.</p>
+                    <a class="btn btn-warning" asp-area="" asp-controller="Correos" asp-action="Index">Ver Correo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />

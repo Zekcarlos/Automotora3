@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Automotora3.Models.Sucursales>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Bienvenido Ahora Puedes Agregar Nuevas Sucursales</h1>
+
+<p>
+    <a asp-action="Create">NuevaSucursal</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dueño)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dueño)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="text-white"><button type="button" class="btn btn-warning">Editar</button></a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="text-white"><button type="button" class="btn btn-warning">Detalles</button></a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="text-white"><button type="button" class="btn btn-danger">Borrar</button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

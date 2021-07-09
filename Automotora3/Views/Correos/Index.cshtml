@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model IEnumerable<Automotora3.Models.Correo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Correo</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.from)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.to)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.body)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.from)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.to)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.body)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.id" class="text-white"><button type="button" class="btn btn-warning">Detalles</button></a>
+                <a asp-action="Delete" asp-route-id="@item.id" class="text-white"><button type="button" class="btn btn-danger">Eliminar</button></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
